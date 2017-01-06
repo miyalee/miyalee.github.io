@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Miya&#39;s Note</title>
+  <subtitle>keep learning</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://miyalee.com/"/>
+  <updated>2017-01-06T06:09:07.237Z</updated>
+  <id>http://miyalee.com/</id>
+  
+  <author>
+    <name>Miya Lee</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>blog</title>
+    <link href="http://miyalee.com/2017/01/05/blog/"/>
+    <id>http://miyalee.com/2017/01/05/blog/</id>
+    <published>2017-01-05T07:19:16.000Z</published>
+    <updated>2017-01-06T06:09:07.237Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+    
+    </summary>
+    
+    
+      <category term="测试" scheme="http://miyalee.com/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+</feed>
