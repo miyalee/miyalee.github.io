@@ -17,4 +17,4 @@
     $ hexo server
 ```
 
-### 文档：[NexT文档](http://theme-next.iissnan.com/getting-started.html)
+### 文档：[NexT文档](http://theme-next.iissnan.com/getting-started.html)，[hexo文档](https://hexo.io/docs/)
