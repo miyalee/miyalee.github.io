@@ -1,0 +1,22 @@
+menu:
+    首页: /
+    归档: /archives/
+#    tags: /tags/
+    微博: http://weibo.com/u/1792976293
+    GIT: https://github.com/miyalee
+#    Rss: /atom.xml
+
+favicon: /favicon.png
+logo: /log.png
+
+# Comment
+# e.g disqus: seansun
+disqus:
+duoshuo: miyalee
+
+# Analytics
+# google-analytics:
+ga: UA-65933410-1
+
+# Copyright Infomation
+startyear: 2016

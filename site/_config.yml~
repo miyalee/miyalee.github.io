@@ -63,16 +63,17 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: apollo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git 
-  repo: https://github.com/miyalee/miyalee.github.io.git
+  repo: git@github.com:miyalee/miyalee.github.io.git
   branch: master
 
 #avatar
 avatar: /images/avatar.png
 
-jiathis: true
+#jiathis: true
+#duoshuo_shortname: miyalee
