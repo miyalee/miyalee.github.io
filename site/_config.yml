@@ -68,7 +68,7 @@ theme: apollo
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git 
+  type: git
   repo: git@github.com:miyalee/miyalee.github.io.git
   branch: master
 
