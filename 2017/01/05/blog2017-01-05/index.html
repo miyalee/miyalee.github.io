@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 不用买域名和服务器，用hexo和git page快速打造一个博客站点！ · Miya's Note</title><meta name="description" content="不用买域名和服务器，用hexo和git page快速打造一个博客站点！ - Miya Lee"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="Miya's Note"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/logo.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="https://github.com/miyalee" target="_blank" class="nav-list-link">GIT</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">不用买域名和服务器，用hexo和git page快速打造一个博客站点！</h1><div class="post-info">Jan 5, 2017</div><div class="post-content"><p>这是一个拖了很久的坑，开一个自己的站点是一年前就有的想法，然而由于各种各样的原因现在才正式开搞，其中不乏沉迷看番，沉迷游戏，沉迷学习无法自拔<br>不管怎么样，终于有自己的站点啦，今后会将自己接触的感兴趣的所有东西都记录下来耶！等老了看看吐槽下自己，耶～想想就好刺激</p>
+<p>辣么作为第一篇文章，我决定就写一下这个高大上的站点的形成过程！<img src="/images/emoticon/67.gif" alt="开心" style="display:inline; margin:0;"><br><a id="more"></a></p>
+<h4 id="安装hexo并配置"><a href="#安装hexo并配置" class="headerlink" title="安装hexo并配置"></a>安装hexo并配置</h4><p>之前本来想自己写一个，但实在无心顾忌又不想再拖，搜刮了自己的大脑想起了之前看到过的<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a>，看了一下文档感觉灰常之简便啊！编辑方面也支持我喜欢的markdown，我超爱的极简风主题也是应有尽有，几个命令就能开搞。如果你也是不想在博客内容外的东西费心思，那你还等什么！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ hexo init blog  //blog可以换成你自定义的站点文件夹名字，hexo和你的文档都会在这里</span><br><span class="line">$ cd blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>然后可以去<code>_config.yml</code>里定义你的博客名字，描述等等，详细看文档的<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">配置</a></p>
+<p>定义完了我们就可以开始写文章啦<br><code>$ hexo new title //默认问post布局，title改为你的文章名</code></p>
+<p>然后你就会发现<code>source</code>多了一个文件夹<code>_post</code> 里面乖乖的躺着你刚新建的文档～直接打开编辑就可以啦～</p>
+<h4 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h4><p>文档头部有一些字段，title就是文章标题，date就是文章创建时间，tags是标签，用于博客的归档</p>
+<p>是不是写了两句就想感觉看看效果！你不是一个人！<br>赶紧部署一发！<br><code>$ hexo generate //生成静态文件</code><br>熟悉了直接<code>$ hexo g</code></p>
+<p>刷刷刷生成完毕！</p>
+<p>然后执行：<br><code>$ hexo server 开启服务</code><br>熟练后直接<code>$ hexo s --debug //开启debug模式方便调试</code></p>
+<p>看到命令行最后显示：</p>
+<p><code>INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</code></p>
+<p>然后就可以打开4000端口看效果了～</p>
+<p>看完是不是觉得 好！ 失！ 望！</p>
+<p>默认主题的话奇丑无比难以满足一般审美的我们（笑），解决起来很简单，去hexo官网挑选一个主题就可以啦</p>
+<p>如果没有再文章中写什么奇怪的东西的话保存的时候浏览器那边是自动刷新的（是的我被自己写的奇怪的东西坑过。。。），页面中有乱码也要看看是不是文章里写了hexo不能解析的东西</p>
+<h4 id="hexo与github-page"><a href="#hexo与github-page" class="headerlink" title="hexo与github page"></a>hexo与github page</h4><p>文章写完了但是只能在localhost看，其他小伙伴都看不到好寂寞的怎么办，申请域名买服务器又费钱又麻烦，有没有什么服务可以帮我们做到这些事情呢？</p>
+<p>这时候我突然想起之前看到很多小伙伴的博客域名后缀都是github.io，诶，他们和github是有什么不正当关系？！查了一番资料，原来github提够站点服务，即github page，并且hexo有相对的配置项，可以直接用命令deploy到git上去，作为简单的博客或项目介绍类网站是再合适不过的！</p>
+<p>是不是已经迫不及待了！<img src="/images/emoticon/52.gif" alt="迫不及待" style="display:inline; margin:0;"></p>
+<p>首先按照github page<a href="https://pages.github.com/" target="_blank" rel="noopener">教程</a>新建一个仓库，仓库名即你的自定义域名(重要)。然后更改<code>_config.yml</code>deploy字段如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:×××/××××××.git //新建仓库的ssh</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p>之后就可以<code>$ hexo deploy</code>直接部署到这个仓库，方便到不能再方便了！</p>
+<p>部署完成后，再浏览器输入你自定义的域名，登登登登～从此好基友也能浏览你的博客啦～<img src="/images/emoticon/71.gif" alt="好基友" style="display:inline; margin:0;"></p>
+<h4 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h4><p>第一次见标签插件这种书写格式，根本不知道怎么使用，搜索资料加上各种尝试才知道跟markdown一起写就可以，费了我好半天时间，好傻</p>
+<p>一开始其实用的是nexT主题因为看起来比较成熟，没想到一篇文章写了大半保存后突然发现不是页面空白就是页面底部有乱码，严重影响进度。</p>
+<p>后来发现head里有个js文件名乱码了无法进行下一步渲染，然而不管怎么查也难以查明这个js文件的源头和出错原因，命令行也只是报了一个</p>
+<div class="tip">“The header content contains invalid characters”</div>
+
+<p><img src="/images/emoticon/58.gif" alt="吐血" style="display:inline; margin:0;"></p>
+<p>搜到的资料和issues有的说是http-server需要更新有的说是hexo的bug，不管怎样都没有解决。后来我试着把nexT主题换成另外一个喜欢的也就是现在这个主题感觉好了一点。文字太多本地还是会乱码，deploy不会，现在仍未解决<br><a href="https://github.com/hexojs/hexo/issues/2285" target="_blank" rel="noopener">hexo的对应issue</a></p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/01/19/blog2017-1-19/" class="prev">上一篇</a></div><div data-thread-key="2017/01/05/blog2017-01-05/" data-title="不用买域名和服务器，用hexo和git page快速打造一个博客站点！" data-url="http://yoursite.com/2017/01/05/blog2017-01-05/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"miyalee"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2016 - 2017 <a href="http://yoursite.com">Miya Lee</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script></body></html>

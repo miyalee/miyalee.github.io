@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 在多地点使用hexo更新博客 · Miya's Note</title><meta name="description" content="在多地点使用hexo更新博客 - Miya Lee"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="Miya's Note"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/logo.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="https://github.com/miyalee" target="_blank" class="nav-list-link">GIT</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">在多地点使用hexo更新博客</h1><div class="post-info">Feb 6, 2017</div><div class="post-content"><p>使用hexo后生活变得美好多了！但马上遇到了一个问题，东西写到一半要回家了怎么办？在家想接着写？或者在家写好的到公司或者哪里想修改？</p>
+<p>第一个想到方法就是随身携带优盘，拷过来，拷过去。感觉好蠢。。。开个git仓库存储是一个好方法，不过这里介绍的是更简便更人性的另一种方式<br><a id="more"></a><br>其实很简单，<strong>在你git page对应那个仓库新建一个分支</strong>，比如叫hexo，把你博客文件pull上去就可以了！<strong>master存deploy的内容，hexo存文件信息</strong>，互不干扰！</p>
+<p>不过如果你有主题文件<code>theme</code>的话，上传的时候会遇到子模块的问题，我所知的简便的解决方式有两种：</p>
+<ul>
+<li>一种是只上传source的内容，到另一台计算机上的时候重新<code>hexo init</code>，再把文件内容覆盖过去。缺点就是主题和配置文件等修妖自己再捣鼓一遍</li>
+<li>另一种也是我现在使用的，之所以遇到子模块是因为为了主题的更新，theme文件是作为一个git库存在，如果主题作者更新了内容，只需要再库里<code>git pull</code>就可以。想要作为一个文件上传的话<strong>只需要把<code>.git</code>删掉</strong>就可以顺利上传了</li>
+</ul>
+<p>恩就酱～<img src="/images/emoticon/78.gif" alt="yes!" style="display:inline; margin:0;"></p>
+</div></article></div></main><footer><div class="paginator"><a href="/2017/02/15/blog2017-02-15/" class="prev">上一篇</a><a href="/2017/02/03/blog2017-02-03/" class="next">下一篇</a></div><div data-thread-key="2017/02/06/blog2017-02-06/" data-title="在多地点使用hexo更新博客" data-url="http://yoursite.com/2017/02/06/blog2017-02-06/" data-author-key="1" class="ds-thread"></div><script>var duoshuoQuery = {short_name:"miyalee"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+
+</script><div class="copyright"><p>© 2016 - 2017 <a href="http://yoursite.com">Miya Lee</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script></body></html>
