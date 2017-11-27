@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-23T09:35:33.000Z</updated>
+  <updated>2017-11-27T10:38:38.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>“正儿八经”的做一个让semantic下拉菜单更支持vue的组件（下）</title>
+    <link href="http://yoursite.com/2017/11/27/blog2017-11-27/"/>
+    <id>http://yoursite.com/2017/11/27/blog2017-11-27/</id>
+    <published>2017-11-27T07:16:46.000Z</published>
+    <updated>2017-11-27T10:38:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>上篇主要描述了组件功能的开发，本篇将描述如何将开发好的组件变得更人性化并打包发布<br><a id="more"></a></p><p>所以“正儿八经”主要是指接下来要做的事情。像上篇中那样的组件开发，平时开发项目也会经常遇到，编写可复用模块化的项目，是我们永恒不变的理念<img src="/images/emoticon/78.gif" alt="yes" style="display:inline; margin:0;"></p><p>正如上面所说，如果把用组件的人看为用户，那就需要让用户去git上先pull下这个组件文件 —&gt;  copy到自己项目中 —&gt; 然后import到对应位置 —&gt; 再用Vue进行注册 —&gt; 使用</p><p>这样繁杂的操作会将人性抛弃的无影无踪。。。而常见的这类工具一般都是可以使用npm一键install，然后一个vue.use()使用，并又一个详细的readme介绍和可运行的示例</p><p>这就是我们的最终目标</p><h4 id="vue的install"><a href="#vue的install" class="headerlink" title="vue的install"></a>vue的install</h4><p>我们常见的像各类UI框架的使用方式都是vue.use()使用，那这个是怎么做到的呢？其实是用了vue的一个install将其生成一个插件，<a href="https://cn.vuejs.org/v2/guide/plugins.html#开发插件" target="_blank" rel="noopener">官方文档在此</a></p><p>install这个function里面可以做很多事情，我没有研究太多，根据目前需求暂时做成了这样：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Dropdown <span class="keyword">from</span> <span class="string">'../src/components/Dropdown.vue'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    install: <span class="function"><span class="keyword">function</span> (<span class="params">Vue, options</span>) </span>&#123;</span><br><span class="line">        Vue.component(<span class="string">'Dropdown'</span>, Dropdown)</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>Dropdown.vue是下拉菜单那个组件，新建js在static下面，将这些内容写入保存（我的命名是<code>vue-semantic-dropdown.js</code></p><p>这样用户使用Vue.use(Dropdown)的时候就会执行install里的内容，就不需要再注册组件了</p><p><code>vue-semantic-dropdown.js</code>放到static是因为这里面的内容不会被压缩处理，npm打包的时候比较方便</p><h4 id="npm打包发布"><a href="#npm打包发布" class="headerlink" title="npm打包发布"></a>npm打包发布</h4><p>代码部分都准备好了，接下来就是发布了。如果想发布到npm总库中，首先需要有npm的帐号，没有可以到官网注册<a href="https://www.npmjs.com/" target="_blank" rel="noopener">https://www.npmjs.com/</a></p><p>然后在命令行<code>$ npm adduser</code>，根据提示输入用户名密码等信息</p><p>按需在你项目的package.json中增加相应内容（vue-cli生成的项目会自带），比如<code>keywords</code>，<code>repository</code>，<code>license</code>等，<code>name</code>，<code>version</code>也要记得修改，可以去官网查看详细字段这里不做介绍</p><p>最重要的是main字段，这里填写的文件路径，将成为用户install下来然后<code>import</code>或者<code>require</code>后的入口文件，像这个项目就应该填<code>static/vue-semantic-dropdown.js</code>。</p><p>那么npm install后<code>import Dropdown from &#39;vue-semantic-dropdown&#39;</code>这里的Dropdown就会是<code>static/vue-semantic-dropdown.js</code>这个文件</p><p>改写完成后输入<code>$ npm publish</code>即可发布，成功后可以到npm官网自己的页面看到发布后到样子，兴不兴奋！</p><p>用户使用的时候具体就是<br>1.<code>$ npm install vue-semantic-dropdown --save</code></p><p>2.main.js:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Dropdown <span class="keyword">from</span> <span class="string">'vue-semantic-dropdown'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Dropdown)</span><br></pre></td></tr></table></figure></p><h4 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h4><p>这样基本就完成了，最后记得写一个一眼就能看懂如何使用的README.md和放一个可以查看效果的例子在项目中，在App.vue真正引入用一下这类的。我的在<a href="https://github.com/miyalee/vue-semantic-dropdown" target="_blank" rel="noopener">这里</a>（为了一颗星星不厌其烦的发地址<img src="/images/emoticon/40.gif" alt="呲牙" style="display:inline; margin:0;">）</p><p>在发布的时候需要改下version，同一版本不能发布两次，本来也应该这样，对吧～</p><p>end</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上篇主要描述了组件功能的开发，本篇将描述如何将开发好的组件变得更人性化并打包发布&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+      <category term="npm发布" scheme="http://yoursite.com/tags/npm%E5%8F%91%E5%B8%83/"/>
+    
+  </entry>
   
   <entry>
     <title>“正儿八经”的做一个让semantic下拉菜单更支持vue的组件（上）</title>
