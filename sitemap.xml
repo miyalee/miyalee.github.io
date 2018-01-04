@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/01/03/blog2018-01-03/</loc>
+    
+    <lastmod>2018-01-04T09:15:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/11/27/blog2017-11-27/</loc>
     
     <lastmod>2017-11-27T10:38:38.000Z</lastmod>
@@ -30,21 +37,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/03/28/blog2017-03-28/</loc>
-    
-    <lastmod>2017-11-23T03:25:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/02/06/blog2017-02-06/</loc>
-    
-    <lastmod>2017-11-23T03:25:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/02/15/blog2017-02-15/</loc>
+    <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2017-11-23T03:25:42.000Z</lastmod>
     
@@ -58,6 +51,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/2017/02/06/blog2017-02-06/</loc>
+    
+    <lastmod>2017-11-23T03:25:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/04/11/blog2017-04-11/</loc>
     
     <lastmod>2017-11-23T03:25:42.000Z</lastmod>
@@ -65,7 +65,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>http://yoursite.com/2017/03/28/blog2017-03-28/</loc>
+    
+    <lastmod>2017-11-23T03:25:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/02/15/blog2017-02-15/</loc>
     
     <lastmod>2017-11-23T03:25:42.000Z</lastmod>
     
