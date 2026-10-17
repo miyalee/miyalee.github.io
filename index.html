@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miya Li — Coding Work</title>
-    <meta name="description" content="Selected coding work by Miya Li: web demos, p5.js sketches and Python.">
+    <title>Miya(Mengya) Li — Coding Work</title>
+    <meta name="description" content="Selected coding work by Miya(Mengya) Li: web demos, p5.js sketches and Python.">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23111'/%3E%3Ctext x='16' y='22.5' font-family='Helvetica,Arial,sans-serif' font-size='17' font-weight='700' fill='%23fff' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,63 +13,82 @@
         <a href="https://github.com/miyalee?tab=repositories">GitHub ↗</a>
     </nav>
 
-    <main>
-        <header>
-            <h1>Miya Li</h1>
-            <p>Selected coding work, 2026</p>
-        </header>
+    <!-- Fixed on the left: name and a list of every work -->
+    <aside class="sidebar">
+        <h1>Miya(Mengya) Li</h1>
+        <p class="intro">Selected coding work, 2026</p>
 
+        <nav class="index">
+            <h2>Web</h2>
+            <a href="#the-goals">The Goals</a>
+            <a href="#next-chapter">Next Chapter</a>
+
+            <h2>p5.js</h2>
+            <a href="#tornado">Tornado</a>
+            <a href="#cats-in-the-dark">Cats in the Dark</a>
+            <a href="#stroke-blooming">Stroke Blooming</a>
+            <a href="#communication">Communication</a>
+            <a href="#diamond">Diamond</a>
+            <a href="#window-view">Window View</a>
+
+            <h2>Python</h2>
+            <a href="#loan-repayment">Loan Repayment Prediction</a>
+        </nav>
+    </aside>
+
+    <!-- Only the picture and the title are links, the description and tags are plain text -->
+    <main>
         <section>
             <h2>Web</h2>
             <div class="grid two">
-                <a class="work" href="/the-goals/">
-                    <img src="images/the-goals.jpg" alt="The Goals: treemaps of nursing and ICT job markets by city">
-                    <h3>The Goals</h3>
-                    <p>Two careers, Nursing and ICT, matched to one shared city.</p>
+                <article class="work" id="the-goals">
+                    <a href="/the-goals/"><img src="images/the-goals.jpg" alt="The Goals: final recommendation on a 3D map of Australia"></a>
+                    <h3><a href="/the-goals/">The Goals</a></h3>
+                    <p>An upgraded Next Chapter: two careers, Nursing and ICT, matched to one shared city.</p>
                     <span class="meta">JavaScript · Vite</span>
-                </a>
-                <a class="work" href="/next-chapter-demo/">
-                    <img src="images/next-chapter.jpg" alt="Next Chapter: map of eight candidate cities in Australia">
-                    <h3>Next Chapter</h3>
+                </article>
+                <article class="work" id="next-chapter">
+                    <a href="/next-chapter-demo/"><img src="images/next-chapter.jpg" alt="Next Chapter: final recommendation on a map of Australia"></a>
+                    <h3><a href="/next-chapter-demo/">Next Chapter</a></h3>
                     <p>Career evidence, step by step, to a city recommendation.</p>
                     <span class="meta">JavaScript · Vite</span>
-                </a>
+                </article>
             </div>
         </section>
 
         <section>
             <h2>p5.js</h2>
             <div class="grid three">
-                <a class="work" href="/p5-sketchbook/A1F_Tornado/">
-                    <img src="/p5-sketchbook/A1F_Tornado/media/version1.png" alt="A 3D cartoon tornado of stacked rings">
-                    <h3>Tornado</h3>
+                <article class="work" id="tornado">
+                    <a href="/p5-sketchbook/A1F_Tornado/"><img src="/p5-sketchbook/A1F_Tornado/media/version1.png" alt="A 3D cartoon tornado of stacked rings"></a>
+                    <h3><a href="/p5-sketchbook/A1F_Tornado/">Tornado</a></h3>
                     <span class="meta">3D · drag · panel</span>
-                </a>
-                <a class="work" href="/p5-sketchbook/A1E_CatsInTheDark/">
-                    <img src="/p5-sketchbook/A1E_CatsInTheDark/media/version2.png" alt="Cats with glowing eyes in a dark room">
-                    <h3>Cats in the Dark</h3>
+                </article>
+                <article class="work" id="cats-in-the-dark">
+                    <a href="/p5-sketchbook/A1E_CatsInTheDark/"><img src="/p5-sketchbook/A1E_CatsInTheDark/media/version2.png" alt="Cats with glowing eyes in a dark room"></a>
+                    <h3><a href="/p5-sketchbook/A1E_CatsInTheDark/">Cats in the Dark</a></h3>
                     <span class="meta">microphone</span>
-                </a>
-                <a class="work" href="/p5-sketchbook/A1D_StrokeBlooming/">
-                    <img src="/p5-sketchbook/A1D_StrokeBlooming/media/version1.png" alt="Flowers blooming along a drawn line">
-                    <h3>Stroke Blooming</h3>
+                </article>
+                <article class="work" id="stroke-blooming">
+                    <a href="/p5-sketchbook/A1D_StrokeBlooming/"><img src="/p5-sketchbook/A1D_StrokeBlooming/media/version1.png" alt="Flowers blooming along a drawn line"></a>
+                    <h3><a href="/p5-sketchbook/A1D_StrokeBlooming/">Stroke Blooming</a></h3>
                     <span class="meta">drag</span>
-                </a>
-                <a class="work" href="/p5-sketchbook/A1C_Communication/">
-                    <img src="/p5-sketchbook/A1C_Communication/media/version2.png" alt="A phone screen with chat bubbles">
-                    <h3>Communication</h3>
+                </article>
+                <article class="work" id="communication">
+                    <a href="/p5-sketchbook/A1C_Communication/"><img src="/p5-sketchbook/A1C_Communication/media/version2.png" alt="A phone screen with chat bubbles"></a>
+                    <h3><a href="/p5-sketchbook/A1C_Communication/">Communication</a></h3>
                     <span class="meta">tap</span>
-                </a>
-                <a class="work" href="/p5-sketchbook/A1B_Diamond/">
-                    <img src="/p5-sketchbook/A1B_Diamond/media/version1.png" alt="A large diamond made of small diamond tiles">
-                    <h3>Diamond</h3>
+                </article>
+                <article class="work" id="diamond">
+                    <a href="/p5-sketchbook/A1B_Diamond/"><img src="/p5-sketchbook/A1B_Diamond/media/version1.png" alt="A large diamond made of small diamond tiles"></a>
+                    <h3><a href="/p5-sketchbook/A1B_Diamond/">Diamond</a></h3>
                     <span class="meta">click</span>
-                </a>
-                <a class="work" href="/p5-sketchbook/A1A_WindowView/">
-                    <img src="/p5-sketchbook/A1A_WindowView/media/version1.png" alt="A pale sky seen through a window frame">
-                    <h3>Window View</h3>
+                </article>
+                <article class="work" id="window-view">
+                    <a href="/p5-sketchbook/A1A_WindowView/"><img src="/p5-sketchbook/A1A_WindowView/media/version1.png" alt="A pale sky seen through a window frame"></a>
+                    <h3><a href="/p5-sketchbook/A1A_WindowView/">Window View</a></h3>
                     <span class="meta">reload</span>
-                </a>
+                </article>
             </div>
             <a class="more" href="/p5-sketchbook/">All sketches →</a>
         </section>
@@ -77,12 +96,12 @@
         <section>
             <h2>Python</h2>
             <div class="grid two">
-                <a class="work" href="https://github.com/miyalee/loan-repayment-prediction">
-                    <img class="chart" src="images/loan-roc.png" alt="ROC curve of a K-nearest neighbours model">
-                    <h3>Loan Repayment Prediction ↗</h3>
+                <article class="work" id="loan-repayment">
+                    <a href="https://github.com/miyalee/loan-repayment-prediction"><img class="chart" src="images/loan-roc.png" alt="ROC curve of a K-nearest neighbours model"></a>
+                    <h3><a href="https://github.com/miyalee/loan-repayment-prediction">Loan Repayment Prediction ↗</a></h3>
                     <p>K-NN, Decision Tree and MLP compared on loan applicant data.</p>
                     <span class="meta">Python · scikit-learn · Jupyter</span>
-                </a>
+                </article>
             </div>
         </section>
     </main>
