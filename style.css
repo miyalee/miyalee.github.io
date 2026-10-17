@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+    color: #111111;
+    font-family: -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Thin bar in the top right corner */
+.corner {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+}
+
+.corner a {
+    display: block;
+    padding: 4px 10px;
+    border: 1px solid #dddddd;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: #555555;
+}
+
+.corner a:hover {
+    border-color: #111111;
+    color: #111111;
+}
+
+main {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 120px 32px 120px;
+}
+
+header h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #777777;
+}
+
+section {
+    margin-top: 96px;
+}
+
+h2 {
+    padding-bottom: 12px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #777777;
+}
+
+.grid {
+    display: grid;
+    gap: 40px 28px;
+}
+
+.grid.two {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid.three {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* One work: picture, name, a line, tags */
+.work img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    background: #f6f6f6;
+    transition: border-color 0.2s;
+}
+
+/* Sketches keep their middle, the web screenshots keep their top */
+.grid.three .work img {
+    object-position: center;
+}
+
+.work img.chart {
+    object-fit: contain;
+    padding: 24px;
+    background: #ffffff;
+}
+
+.work:hover img {
+    border-color: #111111;
+}
+
+.work h3 {
+    margin-top: 14px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.work p {
+    margin-top: 4px;
+    font-size: 15px;
+    line-height: 1.45;
+    color: #555555;
+}
+
+.meta {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #999999;
+}
+
+.more {
+    display: inline-block;
+    margin-top: 32px;
+    font-size: 15px;
+    color: #555555;
+}
+
+.more:hover {
+    color: #111111;
+}
+
+@media (max-width: 760px) {
+    main {
+        padding: 96px 20px 80px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    .grid.two,
+    .grid.three {
+        grid-template-columns: 1fr;
+    }
+}
