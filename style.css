@@ -147,8 +147,9 @@ main h2 {
     transition: border-color 0.2s;
 }
 
-/* Sketches keep their middle, the web screenshots keep their top */
+/* Sketches are mostly upright, so their pictures are half as tall again, and keep their middle */
 .grid.three .work img {
+    aspect-ratio: 16 / 15;
     object-position: center;
 }
 
@@ -162,10 +163,25 @@ main h2 {
     border-color: #111111;
 }
 
-.work h3 {
+/* Title on the left, month on the right */
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
     margin-top: 14px;
+}
+
+.work h3 {
     font-size: 18px;
     font-weight: 600;
+}
+
+.head time {
+    flex-shrink: 0;
+    font-size: 13px;
+    color: #999999;
+    font-variant-numeric: tabular-nums;
 }
 
 .work h3 a:hover {
